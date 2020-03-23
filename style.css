@@ -1,0 +1,235 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Kanit', sans-serif;
+    background-color: #0B877D;
+    overflow: hidden;
+    
+}
+
+h1{
+   font-family: 'Play', sans-serif; 
+    border-bottom: 2px solid white;
+    width: 100%;
+    text-align: center;
+    padding: 2vh 0 5vh 0;
+    background-color: #001727;
+    color: white;
+    margin-top: 0;
+    animation: slide 1.5s;
+}
+body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+.inner_ContainerSecond,.inner_Container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 25% 45% 25%;
+    grid-gap: 0.2rem;
+    margin: 4vh 0 1vh 0;
+    text-align: center;
+
+    
+}
+
+.container{
+    display: flex;
+    flex-flow: column wrap;
+    border-radius: 10px;
+    width: 90%;
+    height: 25%;
+    align-items: center;
+    margin: 9vh 0 1vh 0;
+    background-color: #91AAB4;
+    animation: slideText 1.5s;
+}
+
+
+.containerHeight{
+     width: 90%;
+     height: 25%;
+    display: grid;
+    grid-template-areas: "label1 label2"
+        
+                         "feet inch"
+                         "select select";
+    
+    grid-template-columns: repeat(2,40%);
+    grid-gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    margin:3vh 0 2vh 0;
+    background-color: #91AAB4;
+    border-radius: 10px;
+    animation: slideText 1.5s;
+}
+.calc_Button,.reset_Button{
+   animation: slideText 1.5s; 
+}
+
+.buttons{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+}
+
+input,button{
+    border-radius: 5px;
+}
+
+
+select{
+    border-radius: 10px;
+}
+
+
+.feet{
+    grid-area: feet;
+}
+.inch{
+    grid-area: inch;
+}
+.calc_Button{
+    margin-right: 30vw;
+    width: 30%;
+}
+.reset_Button{
+   align-self: right;
+     width: 30%;
+}
+
+.label1{
+    grid-area: label1;
+}
+.label2{
+    grid-area: label2;
+}
+.activity{
+    grid-area: select;
+}
+
+.display{
+    height: 20%;
+    width: 90%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.active{
+   animation: slide 500ms 
+}
+
+input:focus{
+    border: 3px solid yellow;
+    transition: 300ms;
+}
+.calc_Button:hover{
+     background: green;
+    color: white;
+    transition: 850ms;
+    cursor: pointer;
+}
+.reset_Button:hover{
+   background: red;
+    color: white;
+    transition: 850ms;
+    cursor: pointer;
+}
+
+footer{
+    height: 10%;
+    width: 100%;
+    padding-bottom: 5vh;
+    background-color: #001727;
+    border-top: 2px solid white;
+    animation: slideFoot 1.5s;
+}
+
+@keyframes slideFoot{
+     0%{
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    25%{
+       opacity: 0.1;  
+    }
+    40%{
+      opacity: 0.2;  
+    }
+    60%{
+     opacity: 0.6;   
+    }
+    80%{
+      opacity: 0.8;  
+    }
+    100%{
+       transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide {
+    0%{
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    25%{
+       opacity: 0.1;  
+    }
+    40%{
+      opacity: 0.2;  
+    }
+    60%{
+     opacity: 0.6;   
+    }
+    80%{
+      opacity: 0.8;  
+    }
+    100%{
+       transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideText {
+    0%{
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    25%{
+       opacity: 0.1;  
+    }
+    40%{
+      opacity: 0.2;  
+    }
+    60%{
+     opacity: 0.6;   
+    }
+    80%{
+      opacity: 0.8;  
+    }
+    100%{
+       transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media all and (min-width:700px){
+    .calc_Button,.reset_Button{
+        width: 10%;
+    }
+    .containerHeight,.container{
+        width: 50%;
+    }
+}
+
+
+

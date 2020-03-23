@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit|Play&display=swap" rel="stylesheet">
+</head>
+<body>
+ <h1>Calories Calculator</h1>
+  <div class="container">
+  <div class="inner_Container">
+  <label>Age:</label>
+  <input class="age">
+   <select class="gender">
+       <option value="male">Male</option>
+       <option value="female">Female</option>
+   </select>
+   </div>
+   <div class="inner_ContainerSecond">
+   <label>Weight:</label>
+   <input class="quantity">
+   <select class="weight">
+       <option value="lb">lb</option>
+       <option value="kg">kg</option>
+   </select>
+   </div>
+   </div>
+   <div class="containerHeight">
+      <label class="label1">Feet</label>
+      <input class="feet">
+      <label class="label2">Inches</label>
+      <input class="inch">
+      <select class="activity">
+          <option value="1.2">Sedentary</option>
+          <option value="1.375">Lightly active</option>
+          <option value="1.55">Moderately active</option>
+          <option value="1.725">Very active</option>
+          <option value="1.9">Extra active</option>
+      </select>
+   </div>
+      <div class="buttons">
+       <button class="calc_Button">Calculate</button>
+      <button class="reset_Button">Reset</button>
+      </div>
+   <div class="display">
+      <p class="result"></p>
+   </div>
+   <footer></footer>
+    <script src="bundle.js" type="text/javascript" ></script>
+</body>
+</html>
